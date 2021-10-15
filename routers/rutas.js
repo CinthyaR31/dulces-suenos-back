@@ -15,6 +15,14 @@ router.post('/banners', async (req, res) => {
     res.json({status: 'ok', body: banner});
 });
 
+// Eliminar banners
+router.delete('/banners/:id', async (req, res) => {
+    const banner = await Banner.remove({_id: req.params.id});
+    console.log("banner > ", banner)
+    res.json({status: 'ok', body: banner});
+});
+
+
 // Listar productos
 router.get('/productos', async (req, res) => {
     const productos = await Producto.find();
@@ -34,7 +42,7 @@ router.put('/productos/:id', async (req, res) => {
     res.json({status: 'ok', body: producto});
 });
 
-// Eliminar todos los productos
+// Eliminar productos
 router.delete('/productos/:id', async (req, res) => {
     const producto = await Producto.remove({_id: req.params.id});
     console.log("producto > ", producto)

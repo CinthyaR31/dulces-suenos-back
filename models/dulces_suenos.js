@@ -11,7 +11,6 @@ const Banner = new Schema({
 const Producto = new Schema({
     titulo: String,
     descripcion: String,
-    detalle: String,
     url_imagen: String,
 })
 
@@ -21,6 +20,7 @@ const Pedido = new Schema({
     sabor_relleno: String,
     color_decoracion: String,
     fecha_creacion: Date,
+    costo: Number
 })
 
 
