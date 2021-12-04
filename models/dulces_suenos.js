@@ -18,9 +18,18 @@ const Pedido = new Schema({
     nombre_producto: String,
     sabor_base: String,
     sabor_relleno: String,
+    usuario_id: String,
+    estado: String,
     color_decoracion: String,
     fecha_creacion: Date,
     costo: Number
+})
+
+
+const Usuario = new Schema({
+    nombre: String,
+    password: String,
+    email: {type: String, unique: true},
 })
 
 
@@ -28,4 +37,5 @@ module.exports = {
     Banner: mongoose.model('Banner', Banner),
     Producto: mongoose.model('Producto', Producto),
     Pedido: mongoose.model('Pedido', Pedido),
+    Usuario: mongoose.model('Usuario', Usuario),
 };

@@ -1,7 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const {Banner, Producto, Pedido} = require('../models/dulces_suenos');
+const {Banner, Producto, Pedido, Usuario} = require('../models/dulces_suenos');
+
+
+
 
 // Listar banners
 router.get('/banners', async (req, res) => {
@@ -55,6 +58,21 @@ router.get('/pedidos', async (req, res) => {
     const pedidos = await Pedido.find();
     res.json(pedidos);
 });
+
+// Listar pedidos por estado
+router.get('/pedidos/estado/:estado', async (req, res) => {
+    const pedidos = await Pedido.find({estado: req.params.estado});
+    res.json(pedidos);
+});
+
+// Listar pedidos por usuario
+router.get('/pedidos/:usuario', async (req, res) => {
+    const pedidos = await Pedido.find({usuario_id: req.params.usuario});
+    res.json(pedidos);
+});
+
+
+
 // Crear pedidos
 router.post('/pedidos', async (req, res) => {
     const pedido = new Pedido(req.body);
@@ -62,5 +80,43 @@ router.post('/pedidos', async (req, res) => {
     res.json({status: 'ok', body: pedido});
 });
 
+// Actualizar Producto
+router.put('/pedidos/:id', async (req, res) => {
+    const pedido = await Pedido.findByIdAndUpdate(req.params.id, req.body);
+    res.json({status: 'ok', body: pedido});
+});
+
+
+// Usuarios
+router.get('/usuarios', async (req, res) => {
+    const usuarios = await Usuario.find();
+    res.json(usuarios);
+});
+
+
+// Crear usuarios
+router.post('/usuarios', async (req, res) => {
+    const usuario = new Usuario(req.body);
+    Usuario.findOne({email: req.body.email}, (error, data) => {
+        if (data) {
+            res.status(500).json({status: 'error', mensaje: 'Ya existe el correo electronico'});
+        } else {
+            usuario.save();
+            res.json({status: 'ok', body: usuario});
+        }
+    })
+});
+
+
+// Autenticacion
+router.post('/autenticacion', async (req, res) => {
+    Usuario.findOne({email: req.body.email, password: req.body.password}, (error, data) => {
+        if (data) {
+            res.json({status: 'ok', body: data});
+        } else {
+            res.status(500).json({status: 'error', mensaje: 'Correo o contraseña invalida'});
+        }
+    })
+});
 
 module.exports = router;
