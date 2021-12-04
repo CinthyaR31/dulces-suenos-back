@@ -4,7 +4,13 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const app = express();
+/*
 mongoose.connect('mongodb://localhost/db-dulces-suenos')
+    .then(db => console.log('DB esta conectada'))
+    .catch(err => console.error(err));*/
+
+
+mongoose.connect('mongodb+srv://user_dulces_suenos:user_dulces_suenos@cluster0.h1dn3.mongodb.net/db-dulces-suenos')
     .then(db => console.log('DB esta conectada'))
     .catch(err => console.error(err));
 

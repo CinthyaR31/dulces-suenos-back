@@ -1,0 +1,298 @@
+{
+	"id": "97a0dd5e-9bbc-16fb-eab9-11a769eaf9c4",
+	"name": "Dulces Sueños",
+	"description": "",
+	"order": [
+		"0f834f57-95d3-229c-c6b7-edc8dff56da2",
+		"c52fc6f0-7d1e-7b6c-64aa-54090e79c958",
+		"262e6286-61da-461e-2394-91e2b0175728",
+		"9792aad4-3286-a632-777e-a6a46072a07a",
+		"61f326dc-a4bb-98d4-a0fe-e55a5bfccd03",
+		"7b3836e3-125a-5d66-5d97-ecf576a60b38",
+		"c6aea71a-85d8-0217-d01c-0d9cc74102bb",
+		"4cb26987-9ccd-b486-8dfd-d9348a007576",
+		"d555d159-b546-647b-ece7-c70261d0e80c"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1634183490647,
+	"owner": "17916606",
+	"public": false,
+	"requests": [
+		{
+			"id": "0f834f57-95d3-229c-c6b7-edc8dff56da2",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:3000/dulces-suenos/banners",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1634184738944,
+			"name": "Obtener los banners",
+			"description": "",
+			"collectionId": "97a0dd5e-9bbc-16fb-eab9-11a769eaf9c4",
+			"responses": []
+		},
+		{
+			"id": "262e6286-61da-461e-2394-91e2b0175728",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/dulces-suenos/productos/6167b344302e514c97fd1cca",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1634186155125,
+			"name": "Eliminar Banner",
+			"description": "",
+			"collectionId": "97a0dd5e-9bbc-16fb-eab9-11a769eaf9c4",
+			"responses": [],
+			"rawModeData": "{\n  \"titulo\" : \"tit1\",\n    \"descripcion\" : \"hola\",\n    \"url_imagen\": \"imagen\"\n\n}"
+		},
+		{
+			"id": "4cb26987-9ccd-b486-8dfd-d9348a007576",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:3000/dulces-suenos/pedidos",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1634186467351,
+			"name": "Obtener los pedidos",
+			"description": "",
+			"collectionId": "97a0dd5e-9bbc-16fb-eab9-11a769eaf9c4",
+			"responses": []
+		},
+		{
+			"id": "61f326dc-a4bb-98d4-a0fe-e55a5bfccd03",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/dulces-suenos/productos",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1634185016417,
+			"name": "Crear Producto",
+			"description": "",
+			"collectionId": "97a0dd5e-9bbc-16fb-eab9-11a769eaf9c4",
+			"responses": [],
+			"rawModeData": "{\n    \"titulo\": \"cupcake\",\n    \"descripcion\": \"suave\",\n    \"detalle\": \"rico\"\n\n}"
+		},
+		{
+			"id": "7b3836e3-125a-5d66-5d97-ecf576a60b38",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/dulces-suenos/productos/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1634185152658,
+			"name": "Actualizar Producto",
+			"description": "",
+			"collectionId": "97a0dd5e-9bbc-16fb-eab9-11a769eaf9c4",
+			"responses": [],
+			"rawModeData": "{\n  \"titulo\" : \"tit1\",\n    \"descripcion\" : \"hola\",\n    \"url_imagen\": \"imagen\"\n\n}"
+		},
+		{
+			"id": "9792aad4-3286-a632-777e-a6a46072a07a",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:3000/dulces-suenos/productos",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1634185020058,
+			"name": "Obtener los productos",
+			"description": "",
+			"collectionId": "97a0dd5e-9bbc-16fb-eab9-11a769eaf9c4",
+			"responses": []
+		},
+		{
+			"id": "c52fc6f0-7d1e-7b6c-64aa-54090e79c958",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/dulces-suenos/banners",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1634259247294,
+			"name": "Crear Banner",
+			"description": "",
+			"collectionId": "97a0dd5e-9bbc-16fb-eab9-11a769eaf9c4",
+			"responses": [],
+			"rawModeData": "{\n  \"titulo\" : \"Cupcakes\",\n    \"descripcion\" : \"Un delicioso detalle para cualquier ocasión\",\n    \"url_imagen\": \"Banner3.png\"\n\n}"
+		},
+		{
+			"id": "c6aea71a-85d8-0217-d01c-0d9cc74102bb",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/dulces-suenos/productos/6167b344302e514c97fd1cca",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1634186155125,
+			"name": "Eliminar Producto",
+			"description": "",
+			"collectionId": "97a0dd5e-9bbc-16fb-eab9-11a769eaf9c4",
+			"responses": [],
+			"rawModeData": "{\n  \"titulo\" : \"tit1\",\n    \"descripcion\" : \"hola\",\n    \"url_imagen\": \"imagen\"\n\n}"
+		},
+		{
+			"id": "d555d159-b546-647b-ece7-c70261d0e80c",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/dulces-suenos/banners",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1634184728977,
+			"name": "Crear Banner copy",
+			"description": "",
+			"collectionId": "97a0dd5e-9bbc-16fb-eab9-11a769eaf9c4",
+			"responses": [],
+			"isFromCollection": true,
+			"collectionRequestId": "c52fc6f0-7d1e-7b6c-64aa-54090e79c958",
+			"rawModeData": "{\n  \"titulo\" : \"tit1\",\n    \"descripcion\" : \"hola\",\n    \"url_imagen\": \"imagen\"\n\n}"
+		}
+	]
+}
